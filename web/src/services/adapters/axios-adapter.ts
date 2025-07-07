@@ -1,13 +1,16 @@
-import {
+import type{
   HttpClient,
   RequestConfig,
   Response,
   ResponseHeaders,
 } from '@/types/http'
-import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios'
-import { ApiError, ApiErrorData } from '../error'
+import axios from 'axios'
+import type { AxiosResponse, AxiosError } from 'axios'
+import type { AxiosInstance } from 'axios'
+import { ApiError } from '../error'
+import type { ApiErrorData } from '../error'
 import qs from 'qs'
-
+      
 export class AxiosHttpClientAdapter implements HttpClient {
   private axiosInstance: AxiosInstance
   constructor(_baseURL = '') {

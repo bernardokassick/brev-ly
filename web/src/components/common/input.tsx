@@ -1,5 +1,6 @@
-import { ComponentProps } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import type { ComponentProps } from 'react'
+import { tv } from 'tailwind-variants'
+import type { VariantProps } from 'tailwind-variants'
 
 const input = tv({
   base: 'peer text-md rounded-lg border p-4 font-normal placeholder:text-gray-400',

@@ -1,5 +1,7 @@
-import { Link, LinkExportResponse, LinksPaginatedResponse } from '@/domain/link'
-import { HttpClient } from '@/types/http'
+import type { Link } from '@/domain/link'
+import type { LinkExportResponse } from '@/domain/link'
+import type { LinksPaginatedResponse } from '@/domain/link'
+import type { HttpClient } from '@/types/http'
 
 export type ILinkService = {
   getPagedLinks(): Promise<LinksPaginatedResponse>
@@ -11,7 +13,11 @@ export type ILinkService = {
 }
 
 export class LinkService implements ILinkService {
-  constructor(readonly httpClient: HttpClient) {}
+  readonly httpClient: HttpClient;
+
+  constructor(httpClient: HttpClient) {
+    this.httpClient = httpClient;
+  }
 
   async getPagedLinks(): Promise<LinksPaginatedResponse> {
     const response = await this.httpClient.request<LinksPaginatedResponse>({

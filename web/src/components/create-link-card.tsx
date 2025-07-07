@@ -5,7 +5,7 @@ import { Label } from './common/label'
 import { zodResolver } from '@hookform/resolvers/zod'
 import {
   createLinkForm,
-  CreateLinkForm,
+  type CreateLinkForm,
 } from '@/schemas/create-link-form.schema'
 import { linkService } from '@/services/http'
 import { Warning } from '@phosphor-icons/react/dist/icons/Warning'

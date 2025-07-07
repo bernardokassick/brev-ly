@@ -1,5 +1,6 @@
-import { ComponentProps, ReactNode, useRef } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import { type ComponentProps, type ReactNode, useRef } from 'react'
+import { tv } from 'tailwind-variants'
+import type { VariantProps } from 'tailwind-variants'
 import { Spinner } from '@phosphor-icons/react/dist/icons/Spinner'
 
 const button = tv({

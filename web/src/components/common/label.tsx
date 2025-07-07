@@ -1,5 +1,6 @@
-import { ComponentProps } from 'react'
-import { tv, VariantProps } from 'tailwind-variants'
+import type{ ComponentProps } from 'react'
+import { tv } from 'tailwind-variants'
+import type { VariantProps } from 'tailwind-variants'
 
 const label = tv({
   base: 'text-xs font-normal text-gray-500 peer-focus:font-bold peer-active:font-bold',
